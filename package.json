@@ -11,7 +11,7 @@
 		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check --plugin-search-dir=. .",
 		"format": "prettier --write --plugin-search-dir=. .",
-		"postbuild": "cp node_modules/@prisma/engines/*query* .vercel_build_output/functions/node/render/;cp prisma/schema.prisma .vercel_build_output/functions/node/render/",
+		"postbuild": "cp node_modules/@prisma/engines/*query* .vercel/functions/render.func/;cp prisma/schema.prisma .vercel/functions/render.func/",
 		"vercel-build": "prisma generate && prisma migrate deploy && npm run build"
 	},
 	"devDependencies": {
